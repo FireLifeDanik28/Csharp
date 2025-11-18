@@ -26,6 +26,13 @@
                     max = zad2arr[i];
             }
             Console.WriteLine($"min: {min}; max: {max}");//67 228
+            //zadanie 3
+            //Przećwiczenie manipulacji indeksem w pętli for.
+            string[] imionaZad3Arr = { "Danylo", "George", "Osama", "Jan", "Paweł" };
+            for (int i = 1; i < imionaZad3Arr.Length+1; i++)
+            {
+                Console.WriteLine(imionaZad3Arr[imionaZad3Arr.Length-i]);
+            }
         }
     }
 }
