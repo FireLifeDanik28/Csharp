@@ -58,6 +58,24 @@
             Array.ForEach(a5, Console.WriteLine);
             Console.WriteLine("Array b");
             Array.ForEach(b5, Console.WriteLine);
+            //zadanie 6
+            //Interakcja z użytkownikiem i przeszukiwanie tablicy.
+            int[] zad6 = { 123, 83, 67, 228, 69 };
+            Console.WriteLine("Proszę podać liczbę by znaleść z tablicy");
+            int liczba = int.Parse(Console.ReadLine());
+            for (int i = 0; i < zad6.Length; i++)
+            {
+                if (liczba == zad6[i])
+                {
+                    Console.WriteLine("Liczba X znajduje się w tablicy na indeksie Y.");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Liczba X nie została znaleziona w tablicy.");
+                }
+            }
+
         }
     }
 }
