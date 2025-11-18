@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //początek
+            //zadanie 1
             int arrNumsWynik = 0;
             int[] arrNums = new int[] { 5, 10, 15, 20, 25 };
             for (int i = 0; i < arrNums.Length; i++) {
