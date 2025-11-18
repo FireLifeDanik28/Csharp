@@ -46,7 +46,18 @@
                 Console.WriteLine(i);
             }
             Console.WriteLine($"Ilość liczb parzystych = {iloscPar}");
-
+            //zadanie 5
+            //Praca z dwiema tablicami jednocześnie.
+            int[] a5 = { 123, 83, 67, 228, 69 };
+            int[] b5 = new int[5];
+            for (int i = 0; i < a5.Length; i++)
+            {
+                b5[i] = a5[i] * 2;
+            }
+            Console.WriteLine("Array a");
+            Array.ForEach(a5, Console.WriteLine);
+            Console.WriteLine("Array b");
+            Array.ForEach(b5, Console.WriteLine);
         }
     }
 }
