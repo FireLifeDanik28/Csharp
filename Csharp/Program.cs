@@ -33,6 +33,20 @@
             {
                 Console.WriteLine(imionaZad3Arr[imionaZad3Arr.Length-i]);
             }
+            //zadanie 4
+            //Połączenie pętli foreach z operatorem modulo (%).
+            int[] zad4arr = { 123, 83, 67, 228, 69 };
+            int iloscPar = 0;
+            foreach (int i in zad4arr)
+            {
+                if (i % 2 == 0)
+                {
+                    iloscPar++;
+                }
+                Console.WriteLine(i);
+            }
+            Console.WriteLine($"Ilość liczb parzystych = {iloscPar}");
+
         }
     }
 }
