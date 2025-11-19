@@ -79,6 +79,25 @@
                 if (isFound == false && i == maxAmt)
                 Console.WriteLine($"Liczba {liczba} nie została znaleziona w tablicy.");
             }
+            //zadanie 7
+            //Zrozumienie algorytmu zamiany elementów bez tworzenia nowej tablicy.
+            int[] zad7 = { 123, 83, 67, 228, 69 };
+            int cache1;
+            int cache2;
+            int halfZad7Length = zad7.Length / 2;
+            Console.WriteLine("Tablica przed");
+            Array.ForEach(zad7, Console.WriteLine);
+
+            for (int i = 0; i < halfZad7Length; i++)
+            {
+                cache1 = zad7[i];
+                cache2 = zad7[zad7.Length - 1 - i];
+                zad7[zad7.Length - 1 - i] = cache1;
+                zad7[i] = cache2;
+            }
+
+            Console.WriteLine("Tablica po");
+            Array.ForEach(zad7, Console.WriteLine);
 
         }
     }
