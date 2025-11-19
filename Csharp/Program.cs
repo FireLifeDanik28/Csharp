@@ -61,19 +61,23 @@
             //zadanie 6
             //Interakcja z użytkownikiem i przeszukiwanie tablicy.
             int[] zad6 = { 123, 83, 67, 228, 69 };
+            bool isFound = false;
+            Console.WriteLine("Tablica z zadania 6");
+            Array.ForEach(zad6, Console.WriteLine);
             Console.WriteLine("Proszę podać liczbę by znaleść z tablicy");
             int liczba = int.Parse(Console.ReadLine());
             for (int i = 0; i < zad6.Length; i++)
             {
+                int maxAmt = zad6.Length - 1;
                 if (liczba == zad6[i])
                 {
-                    Console.WriteLine("Liczba X znajduje się w tablicy na indeksie Y.");
+                    //jest
+                    Console.WriteLine($"Liczba {liczba} znajduje się w tablicy na indeksie {i}.");
+                    isFound = true;
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("Liczba X nie została znaleziona w tablicy.");
-                }
+                if (isFound == false && i == maxAmt)
+                Console.WriteLine($"Liczba {liczba} nie została znaleziona w tablicy.");
             }
 
         }
