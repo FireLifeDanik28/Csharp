@@ -110,7 +110,37 @@
                 sumOfAntiDiagonalMatrix = sumOfAntiDiagonalMatrix + matrix[i,antii];
             }
             Console.WriteLine($"Przekątna: {sumOfDiagonalMatrix}, anty-przekątna: {sumOfAntiDiagonalMatrix}");
-            
+            //zadanie 9
+            //Implementacja jednego z najprostszych algorytmów sortowania.
+            int[] zad9 = { 123, 83, 67, 228, 69 };
+            int zad9cache = 0;
+            int sortedValues = 0;
+            Console.WriteLine("Tablica przed");
+            Array.ForEach(zad9, Console.WriteLine);
+            while(sortedValues != zad9.Length)
+            for (int i = 0; i < zad9.Length - 1; i++)
+            {
+                if (sortedValues != zad9.Length)
+                    {
+                        if (zad9[i] > zad9[i + 1])
+                        {
+                            zad9cache = zad9[i + 1];
+                            zad9[i + 1] = zad9[i];
+                            zad9[i] = zad9cache;
+                        }
+                        else
+                        {
+                            sortedValues++;
+                        }
+                    }
+                else
+                    {
+                        break;
+                    }
+                
+            }
+            Console.WriteLine("Tablica po");
+            Array.ForEach(zad9, Console.WriteLine);
         }
     }
 }
