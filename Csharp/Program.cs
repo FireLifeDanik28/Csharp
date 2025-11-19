@@ -142,7 +142,6 @@
             //zadanie 10
             //Praca z dynamiczną strukturą danych i filtrowanie tablicy.
             int[] zad10 = { 123, 123, 67, 67, 69 };
-            int cache10 = 0;
             //duplicate counter
             int numberCounter = 0;
             for (int i = 0; i < zad10.Length - 1; i++)
@@ -178,6 +177,9 @@
             }
             Console.WriteLine("Tablica unikatowa");
             Array.ForEach(zad10uniq, Console.WriteLine);
+            //zadanie 11
+            //Zastosowanie algorytmu porównawczego do weryfikacji symetrii.
+            //int[] zad11 =
         }
     }
 }
