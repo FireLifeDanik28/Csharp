@@ -98,7 +98,19 @@
 
             Console.WriteLine("Tablica po");
             Array.ForEach(zad7, Console.WriteLine);
-
+            //zadanie 8
+            //Przećwiczenie pętli zagnieżdżonych i tablic 2D.
+            int[,] matrix = { { 100, 20, 3 }, { 1000, 20000, 300000 }, { 1000000, 20000000, 300000000 } };
+            int sumOfDiagonalMatrix = 0;
+            int sumOfAntiDiagonalMatrix = 0;
+            for (int i = 0; i < matrix.Length / 3; i++)
+            {
+                int antii = matrix.Length / 3 - 1 - i;
+                sumOfDiagonalMatrix = sumOfDiagonalMatrix + matrix[i,i];
+                sumOfAntiDiagonalMatrix = sumOfAntiDiagonalMatrix + matrix[i,antii];
+            }
+            Console.WriteLine($"Przekątna: {sumOfDiagonalMatrix}, anty-przekątna: {sumOfAntiDiagonalMatrix}");
+            
         }
     }
 }
