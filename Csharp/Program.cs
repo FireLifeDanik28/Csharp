@@ -129,18 +129,55 @@
                             zad9[i] = zad9cache;
                         }
                         else
-                        {
-                            sortedValues++;
-                        }
+                        sortedValues++;
+
                     }
                 else
-                    {
-                        break;
-                    }
+                break;
+                    
                 
             }
             Console.WriteLine("Tablica po");
             Array.ForEach(zad9, Console.WriteLine);
+            //zadanie 10
+            //Praca z dynamiczną strukturą danych i filtrowanie tablicy.
+            int[] zad10 = { 123, 123, 67, 67, 69 };
+            int cache10 = 0;
+            //duplicate counter
+            int numberCounter = 0;
+            for (int i = 0; i < zad10.Length - 1; i++)
+            {
+                for (int j = i + 1; j < zad10.Length - 1; j++)
+                {
+                    if (zad10[i] == zad10[j])
+                    {
+                        numberCounter++;
+                    }
+                        
+                }
+            }
+            int[] zad10uniq = new int[zad10.Length - numberCounter];
+            int index1 = 0;
+            bool breaker = false;
+            for (int i = 0; i < zad10.Length; i++)
+            {
+                for (int j = i + 1; j < zad10.Length - 1; j++)
+                {
+                    if (zad10[i] == zad10[j])
+                    {
+                        breaker = true;
+                        break;
+                    }
+                }
+                if (breaker == false)
+                {
+                    zad10uniq[index1] = zad10[i];
+                    index1 = index1 + 1;
+                }
+                breaker = false;
+            }
+            Console.WriteLine("Tablica unikatowa");
+            Array.ForEach(zad10uniq, Console.WriteLine);
         }
     }
 }
