@@ -179,7 +179,25 @@
             Array.ForEach(zad10uniq, Console.WriteLine);
             //zadanie 11
             //Zastosowanie algorytmu porównawczego do weryfikacji symetrii.
-            //int[] zad11 =
+            int[] zad11 = [0, 12, 2, 5, 11, 9, 11, 5, 2, 12, 0];
+            int halfZad11Length = zad7.Length / 2;
+            bool isPalindrome = true;
+
+            for (int i = 0; i < halfZad11Length; i++)
+            {
+                if (zad11[i] != zad11[zad11.Length - 1 - i])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome == false)
+            {
+                Console.WriteLine("Nie jest palindromem");
+            } else
+            {
+                Console.WriteLine("Jest palindromem");
+            }
         }
     }
 }
