@@ -100,7 +100,11 @@
             Array.ForEach(zad7, Console.WriteLine);
             //zadanie 8
             //Przećwiczenie pętli zagnieżdżonych i tablic 2D.
-            int[,] matrix = { { 100, 20, 3 }, { 1000, 20000, 300000 }, { 1000000, 20000000, 300000000 } };
+            int[,] matrix = { 
+                                { 100, 20, 3 }, 
+                                { 1000, 20000, 300000 }, 
+                                { 1000000, 20000000, 300000000 } 
+                            };
             int sumOfDiagonalMatrix = 0;
             int sumOfAntiDiagonalMatrix = 0;
             for (int i = 0; i < matrix.Length / 3; i++)
@@ -179,8 +183,9 @@
             Array.ForEach(zad10uniq, Console.WriteLine);
             //zadanie 11
             //Zastosowanie algorytmu porównawczego do weryfikacji symetrii.
-            int[] zad11 = [0, 12, 2, 5, 11, 9, 11, 5, 2, 12, 0];
-            int halfZad11Length = zad7.Length / 2;
+            //if length = 11, half length = ~5, if i < 5 i = 0, 1, 2, 3, 4
+            string[] zad11 = ["b", "12", "2", "5", "11", "9", "11", "5", "2", "12", "b"];
+            int halfZad11Length = zad11.Length / 2;
             bool isPalindrome = true;
 
             for (int i = 0; i < halfZad11Length; i++)
